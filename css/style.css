@@ -1,0 +1,218 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+img,
+svg {
+   max-width: 100%;
+}
+
+:root {
+   --green--light: hsl(87, 46%, 50%);
+   --green--hover: hsl(87, 62%, 59%);
+   --white-clr: hsl(0, 0%, 100%);
+   --dark-clr: hsl(0, 0%, 17%);
+   --bkg: hsl(0, 0%, 100%);
+   --text--body: hsl(207, 13%, 34%);
+   --border-clr-white: hsla(0, 0%, 100%, 0.363);
+
+   /* typography based on screen sizes  */
+   --header-lg: clamp(30px, 13.8461525px + 4.615385vw, 60px);
+   --header-md: clamp(25px, 14.2307695px + 3.076923vw, 45px);
+   --header-sm: clamp(20px, 15.6923085px + 1.230769vw, 28px);
+   --body-lg: 20px;
+   --body: 1rem;
+
+   --space-3xs-2xs: clamp(0.31rem, calc(0.14rem + 0.85vw), 0.75rem);
+   --space-2xs-xs: clamp(0.69rem, calc(0.52rem + 0.85vw), 1.13rem);
+   --space-xs-s: clamp(1rem, calc(0.8rem + 0.98vw), 1.5rem);
+   --space-s-m: clamp(1.31rem, calc(0.95rem + 1.83vw), 2.25rem);
+   --space-m-l: clamp(2rem, calc(1.61rem + 1.95vw), 3rem);
+   --space-l-xl: clamp(2.63rem, calc(1.89rem + 3.66vw), 4.5rem);
+   --space-xl-2xl: clamp(3.94rem, calc(3.13rem + 4.02vw), 6rem);
+   --space-2xl-3xl: clamp(5.25rem, calc(3.79rem + 7.32vw), 9rem);
+   --space-3xl-4xl: clamp(7.88rem, calc(7.44rem + 2.2vw), 9rem);
+}
+
+body {
+   font-size: var(--body);
+   font-family: 'Futura PT Light', sans-serif;
+   letter-spacing: 0.02em;
+   line-height: 1.5;
+}
+
+/* TypeGraphy */
+
+.h1 {
+   font-family: 'Overpass', sans-serif;
+   font-size: var(--header-lg);
+   line-height: 1.2;
+}
+
+.h2 {
+   font-size: var(--header-md);
+   color: var(--text--headings);
+   line-height: 1.2;
+}
+
+.h3 {
+   font-size: var(--header-sm);
+   color: var(--text--headings);
+   line-height: 1.2;
+   max-inline-size: 18ch;
+}
+
+.sr-only {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   white-space: nowrap;
+   border-width: 0;
+}
+
+/* Top Divider */
+.divider {
+   background: var(--green--light);
+   height: 52px;
+   width: 100%;
+}
+
+.divider__inner {
+   width: 100%;
+}
+
+.contact {
+   display: flex;
+   margin-top: -18px;
+}
+
+.contact__link {
+   color: var(--white-clr);
+   text-decoration: none;
+   font-size: 14px;
+   border-inline: 1px solid var(--border-clr-white);
+   height: 52px;
+   padding-inline: 1rem;
+   font-family: 'Futura PT Book';
+}
+
+.contact__link:hover {
+   color: var(--white-clr);
+}
+
+.contact__link > i {
+   margin-right: 10px;
+}
+
+.social {
+   list-style: none;
+}
+
+.social__list {
+   width: 50px;
+   height: 52px;
+   border-inline: 1px solid var(--border-clr-white);
+   display: grid;
+   place-items: center;
+}
+
+.social__link {
+   font-size: 14px;
+   color: var(--white-clr);
+}
+
+/* Navigation  */
+.navbar--custom a {
+   font-family: 'Futura PT Book';
+   font-size: 18px;
+   font-weight: 500;
+   color: var(--dark-clr) !important;
+}
+.navbar--custom li:where(:not(:last-child)) {
+   margin-right: 1rem;
+}
+
+.navbar--custom .active,
+.navbar--custom a:hover {
+   color: var(--green--light) !important;
+}
+
+/* Components */
+.button {
+   font-family: 'Futura PT Book';
+   padding: 12px 30px;
+   color: var(--white-clr);
+   border-radius: 5px;
+   width: 227.113px;
+   height: 60px;
+   font-size: 18px;
+   transition: all 0.4s ease-in-out;
+   border: 0;
+   overflow: hidden;
+   position: relative;
+}
+
+.button--dark {
+   background: var(--dark-clr);
+}
+
+.button__text {
+   white-space: nowrap;
+}
+
+.button--dark:hover {
+   background: var(--green--light);
+}
+
+.button__line {
+   height: 1px;
+   background: var(--white-clr);
+   transition: all 0.4s ease-in-out;
+}
+
+.line--big {
+   width: 50px;
+}
+
+.line--small {
+  width: 20px;
+  position: absolute;
+  left: 0%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.button:hover {
+  padding-left: 90px;
+}
+
+.button:hover .line--big {
+  transform: translateX(10px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.button:hover .line--small {
+  transform: translateX(20px);
+  opacity: 1;
+}
+
+
+.button__icon img {
+  white-space: nowrap;
+  position: absolute;
+  right: 8%;
+  width: 25px;
+}
+
+/* Media Queries  */
+@media screen and (max-width: 768px) {
+}
