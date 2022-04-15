@@ -12,13 +12,14 @@ svg {
 }
 
 :root {
-   --green--light: hsl(87, 46%, 50%);
+   --green--light: #85ba45;
    --green--hover: hsl(87, 62%, 59%);
    --white-clr: hsl(0, 0%, 100%);
    --dark-clr: rgb(43, 43, 43);
    --dark-clr-2: rgb(44, 44, 44);
    --gray-1: hsl(0, 0%, 52%);
-   --body-bg-clr: hsl(200, 23%, 97%);
+   --light-gray-clr: hsl(200, 23%, 97%);
+   --body-bg-clr: hsl(0, 0%, 100%);
    --bkg: hsl(0, 0%, 100%);
    --text--body: hsl(207, 13%, 34%);
    --border-clr-white: hsla(0, 0%, 100%, 0.363);
@@ -138,6 +139,11 @@ body {
    background: var(--dark-clr);
 }
 
+.button--transparent {
+   background: transparent;
+   color: var(--green--light);
+}
+
 .button--green {
    background: var(--green--light);
 }
@@ -158,6 +164,10 @@ body {
    height: 1px;
    background: var(--white-clr);
    transition: all 0.4s ease-in-out;
+}
+
+.button--transparent .button__line {
+   background: var(--green--light);
 }
 
 .line--big {
@@ -231,11 +241,16 @@ body {
 }
 
 #chargingServices,
-#about {
+#about,
+#provider {
    padding-block: 6rem;
 }
 
 /* Charging Services */
+
+#chargingServices {
+  background: var(--light-gray-clr);
+}
 
 .section {
    display: grid;
@@ -389,6 +404,80 @@ body {
    bottom: -2px;
 }
 
+/* Provider */
+#provider {
+   background-image: url(https://ecofuel.peacefulqode.com/wp-content/uploads/2021/09/bg-2.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 500px;
+   background-attachment: fixed;
+   position: relative;
+}
+
+.provider__inner {
+   position: relative;
+   z-index: 99;
+}
+
+.overlay {
+   pointer-events: none;
+   height: 100%;
+   width: 100%;
+   background: rgba(49, 49, 49, 0.897);
+   position: absolute;
+   inset: 0;
+   z-index: 1;
+}
+
+.carousal-image {
+   height: 321.925px;
+   width: 100%;
+   overflow: hidden;
+}
+
+.carousal-image,
+.card--zoom {
+   transition: transform 0.5s ease-in-out;
+}
+
+.carousal-image:hover .card--zoom {
+   transform: scale(1.1);
+}
+
+.carousal-card-body {
+   display: grid;
+   place-items: center;
+   gap: 10px;
+   padding-block: 2rem !important;
+   background: #F7F9FA;
+}
+
+.card-subtitle {
+   font-family: 'Futura PT Medium';
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 22px;
+   margin: 0 0 5px;
+   float: left;
+   width: 100%;
+   color: var(--green--light);
+   display: inline-block;
+   text-transform: uppercase;
+}
+
+.carousal-card-body .card-title {
+   font-family: 'Futura PT Medium';
+   font-size: 28px;
+   font-weight: 500;
+}
+
+.carousal-card-body .card-text {
+  font-size: 16px;
+  color: var(--gray-1);
+
+}
+
 /* Media Queries  */
 @media screen and (max-width: 768px) {
    .section__description,
@@ -398,7 +487,8 @@ body {
    }
 
    #chargingServices,
-   #about {
+   #about,
+   #provider {
       padding-block: 3rem;
    }
 
@@ -407,7 +497,7 @@ body {
    }
 
    .about__images > *:first-of-type {
-    margin-inline: auto;
-    width: 100%;
- }
+      margin-inline: auto;
+      width: 100%;
+   }
 }
