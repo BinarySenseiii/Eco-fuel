@@ -15,7 +15,10 @@ svg {
    --green--light: hsl(87, 46%, 50%);
    --green--hover: hsl(87, 62%, 59%);
    --white-clr: hsl(0, 0%, 100%);
-   --dark-clr: hsl(0, 0%, 17%);
+   --dark-clr: rgb(43, 43, 43);
+   --dark-clr-2: rgb(44, 44, 44);
+   --gray-1: hsl(0, 0%, 52%);
+   --body-bg-clr: hsl(200, 23%, 97%);
    --bkg: hsl(0, 0%, 100%);
    --text--body: hsl(207, 13%, 34%);
    --border-clr-white: hsla(0, 0%, 100%, 0.363);
@@ -23,11 +26,10 @@ svg {
 
    /* typography based on screen sizes  */
    --header-lg: clamp(30px, 13.8461525px + 4.615385vw, 72px);
-   --header-md: clamp(25px, 14.2307695px + 3.076923vw, 45px);
+   --header-md: clamp(25px, 14.2307695px + 3.076923vw, 48px);
    --header-sm: clamp(20px, 15.6923085px + 1.230769vw, 28px);
    --body-lg: 20px;
    --body: 1rem;
-   
 }
 
 body {
@@ -35,27 +37,7 @@ body {
    font-family: 'Futura PT Light', sans-serif;
    letter-spacing: 0.02em;
    line-height: 1.5;
-}
-
-/* TypeGraphy */
-
-.h1 {
-   font-family: 'Overpass', sans-serif;
-   font-size: var(--header-lg);
-   line-height: 1.2;
-}
-
-.h2 {
-   font-size: var(--header-md);
-   color: var(--text--headings);
-   line-height: 1.2;
-}
-
-.h3 {
-   font-size: var(--header-sm);
-   color: var(--text--headings);
-   line-height: 1.2;
-   max-inline-size: 18ch;
+   background: var(--body-bg-clr) !important;
 }
 
 .sr-only {
@@ -238,14 +220,144 @@ body {
    display: flex;
    flex-direction: column;
    align-items: center;
+   padding-inline: 1rem;
 }
 
 .slide__content > h1 {
-   font-size: var( --header-lg);
+   font-size: var(--header-lg);
    font-family: 'Futura PT Medium';
    margin-bottom: 2rem;
+   white-space: nowrap;
+}
+
+#chargingServices,
+#about {
+   padding-block: 6rem;
+}
+
+/* Charging Services */
+
+.section {
+   display: grid;
+   gap: 10px;
+}
+
+.section__subtitle {
+   color: var(--green--light);
+   position: relative;
+   font-family: 'Futura PT Medium';
+   text-transform: uppercase;
+   letter-spacing: 0.1rem;
+   max-width: 330px;
+   margin-inline: auto;
+   padding-inline: 50px;
+   box-sizing: content-box;
+}
+
+.custom--subtitle {
+  margin-inline: 0;
+  padding-inline: 0;
+  width: 130px;
+}
+
+.custom--subtitle::after {display: none;}
+
+.section__subtitle::before,
+.section__subtitle::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+   background: var(--green--light);
+   height: 1px;
+   width: 35px;
+}
+
+.section__subtitle::before {
+   right: 0;
+}
+
+.section__subtitle::after {
+   left: 0;
+}
+
+.section__title {
+   color: var(--dark-clr-2, rgb(44, 44, 44));
+   font-size: var(--header-md);
+   text-transform: capitalize;
+   font-family: 'Futura PT Demi';
+   margin: 0;
+}
+
+.section__description {
+   font-family: 'Futura PT Book';
+   font-weight: 400;
+   font-size: 18px;
+   max-width: 730px;
+   margin-inline: auto;
+}
+
+.card-icon {
+   height: 110px;
+   width: 110px;
+   aspect-ratio: 1 / 1;
+   border-radius: 50%;
+   background: var(--green--light);
+   margin-inline: auto;
+   color: var(--white-clr);
+   display: grid;
+   place-items: center;
+   font-size: 3rem;
+}
+
+.card--padding {
+   padding-block: 3rem;
+   border-radius: 6px;
+}
+
+.service--card {
+   transition: 0.4s ease-in-out;
+}
+
+.service--card:hover {
+   --dark-gradient-clr: rgba(0, 0, 0, 0.76);
+   -webkit-box-shadow: 5px 7px 16px -10px var(--dark-gradient-clr);
+   -moz-box-shadow: 5px 7px 16px -10px var(--dark-gradient-clr);
+   box-shadow: 5px 7px 16px -10px var(--dark-gradient-clr);
+}
+
+.card--padding .card-body {
+   margin-block-end: 0;
+}
+
+.service--card .card-title {
+   font-size: 22px;
+   color: var(--dark-clr-2);
+   font-family: 'Futura PT Medium';
+   font-weight: 500;
+}
+
+.service--card .card-text {
+   font-size: 18px;
+   font-family: 'Futura PT Book';
+   color: var(--gray-1);
+}
+
+/* About */
+#about {
+   background: var(--white-clr);
 }
 
 /* Media Queries  */
 @media screen and (max-width: 768px) {
+   .section__description,
+   .service--card .card-text {
+      font-size: 16px;
+   }
+
+   #chargingServices,
+   #about {
+      padding-block: 3rem;
+   }
 }
