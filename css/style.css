@@ -39,6 +39,7 @@ body {
    letter-spacing: 0.02em;
    line-height: 1.5;
    background: var(--body-bg-clr) !important;
+   overflow-x: hidden;
 }
 
 .sr-only {
@@ -249,7 +250,7 @@ body {
 /* Charging Services */
 
 #chargingServices {
-  background: var(--light-gray-clr);
+   background: var(--light-gray-clr);
 }
 
 .section {
@@ -450,7 +451,7 @@ body {
    place-items: center;
    gap: 10px;
    padding-block: 2rem !important;
-   background: #F7F9FA;
+   background: #f7f9fa;
 }
 
 .card-subtitle {
@@ -473,9 +474,38 @@ body {
 }
 
 .carousal-card-body .card-text {
-  font-size: 16px;
-  color: var(--gray-1);
+   font-size: 16px;
+   color: var(--gray-1);
+}
 
+/* Keen Slider Customization */
+.navigation-wrapper {
+   position: relative;
+}
+
+.dots {
+   display: flex;
+   padding: 10px 0;
+   justify-content: center;
+   margin-top: 20px;
+}
+
+.dot {
+   border: none;
+   width: 40px;
+   height: 2px;
+   border-radius: 2px;
+   background: var(--gray-1);
+   margin: 0 5px;
+   cursor: pointer;
+}
+
+.dot:focus {
+   outline: none;
+}
+
+.dot--active {
+   background: var(--green--light);
 }
 
 /* Media Queries  */
