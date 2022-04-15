@@ -1,414 +1,524 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      <title>Ecofuel - just another wordpress site</title>
-      <!-- custom -->
-      <link rel="stylesheet" href="./css/fonts.css" />
-      <link rel="stylesheet" href="./css/style.css" />
-      <!-- Bootstrap -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-      <!-- Icons -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/keen-slider@6.6.6/keen-slider.min.css"
-    />
-   </head>
+  <title>Ecofuel - just another wordpress site</title>
+  <!-- custom -->
+  <link rel="stylesheet" href="./css/fonts.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-   <body>
-      <!-- Top Divider -->
-      <div class="divider d-none d-md-flex">
-         <div class="container">
-            <div class="divider__inner d-flex align-items-center justify-content-between">
-               <div class="divider__contacts">
-                  <div class="contact">
-                     <a class="contact__link d-flex align-items-center" href="tel:+1800001658" target="_self">
-                        <i class="fas fa-phone"></i>
-                        <span class="contact__info">+1800001658</span>
-                     </a>
-                     <a class="contact__link d-flex align-items-center" href="mailto:info@peacefuldesign.com" target="_self">
-                        <i class="fas fa-envelope"></i>
-                        <span>info@peacefuldesign.com</span>
-                     </a>
-                  </div>
-               </div>
-               <div class="divider__socials">
-                  <ul class="social d-flex align-items-center">
-                     <li class="social__list">
-                        <a href="#" class="social__link">
-                           <i class="fab fa-facebook-f"></i>
-                        </a>
-                     </li>
-                     <li class="social__list">
-                        <a href="#" class="social__link">
-                           <i class="fab fa-github"></i>
-                        </a>
-                     </li>
-                     <li class="social__list">
-                        <a href="#" class="social__link">
-                           <i class="fab fa-instagram"></i>
-                        </a>
-                     </li>
-                     <li class="social__list">
-                        <a href="#" class="social__link">
-                           <i class="fab fa-skype"></i>
-                        </a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- End Divider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.6.6/keen-slider.min.css" />
+</head>
 
-      <!-- Navigation -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-         <div class="container">
-            <a class="navbar-brand" href="#">
-               <img src="./images/logo.png" width="150px" height="50px" />
+<body>
+  <!-- Top Divider -->
+  <div class="divider d-none d-md-flex">
+    <div class="container">
+      <div class="divider__inner d-flex align-items-center justify-content-between">
+        <div class="divider__contacts">
+          <div class="contact">
+            <a class="contact__link d-flex align-items-center" href="tel:+1800001658" target="_self">
+              <i class="fas fa-phone"></i>
+              <span class="contact__info">+1800001658</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-               <ul class="navbar-nav navbar--custom d-flex align-items-center mx-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                     <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#">About us</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#">Services</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#">Shop</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#">Blog</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link">
-                        <button class="button button--dark d-flex align-items-center justify-content-between">
-                           <span class="button__line line--small"></span>
-                           <span class="button__text">Get a Quote</span>
-                           <span class="button__icon d-flex align-items-center">
-                              <span class="button__line line--big"></span>
-                              <img src="./svg/carret-right.svg" alt="carret right not found" />
-                           </span>
-                        </button>
-                     </a>
-                  </li>
-               </ul>
-            </div>
-         </div>
-      </nav>
-      <!-- End Navigation -->
+            <a class="contact__link d-flex align-items-center" href="mailto:info@peacefuldesign.com" target="_self">
+              <i class="fas fa-envelope"></i>
+              <span>info@peacefuldesign.com</span>
+            </a>
+          </div>
+        </div>
+        <div class="divider__socials">
+          <ul class="social d-flex align-items-center">
+            <li class="social__list">
+              <a href="#" class="social__link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="social__list">
+              <a href="#" class="social__link">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            <li class="social__list">
+              <a href="#" class="social__link">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li class="social__list">
+              <a href="#" class="social__link">
+                <i class="fab fa-skype"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Divider -->
 
-      <!-- Slider -->
-      <div id="carouselExampleControls" class="carousel carousel--custom slide carousel-fade" data-bs-ride="carousel">
-         <div>
-            <div class="carousel-inner">
-               <!-- Slide -- 1 -->
-               <div class="carousel-item active">
-                  <div class="d-block w-100 slide__one d-flex align-items-center justify-content-center">
-                     <div class="slide__content">
-                        <h1
-                           >Smart EV charging stations and <br class="d-none d-md-block"/>
-                           Software for all businesses</h1
-                        >
-                        <button class="button button--green d-flex align-items-center justify-content-between">
-                           <span class="button__line line--small"></span>
-                           <span class="button__text">Get a Quote</span>
-                           <span class="button__icon d-flex align-items-center">
-                              <span class="button__line line--big"></span>
-                              <img src="./svg/carret-right.svg" alt="carret right not found" />
-                           </span>
-                        </button>
-                     </div>
-                  </div>
-               </div>
-               <!-- Slide 2 -->
-               <div class="carousel-item">
-                  <div class="d-block w-100 slide__two d-flex align-items-center justify-content-center">
-                     <div class="container">
-                        <div class="slide__content">
-                           <h1
-                              >Smart EV charging stations and <br class="d-none d-md-block" />
-                              Software for all businesses</h1
-                           >
-                           <button class="button button--green d-flex align-items-center justify-content-between">
-                              <span class="button__line line--small"></span>
-                              <span class="button__text">Get a Quote</span>
-                              <span class="button__icon d-flex align-items-center">
-                                 <span class="button__line line--big"></span>
-                                 <img src="./svg/carret-right.svg" alt="carret right not found" />
-                              </span>
-                           </button>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <!-- slide 3 -->
-               <div class="carousel-item">
-                  <div class="d-block w-100 slide__three d-flex align-items-center justify-content-center">
-                     <div class="slide__content">
-                        <h1>
-                           Smart EV charging stations and <br class="d-none d-md-block" />
-                           Software for all businesses
-                        </h1>
-                        <button class="button button--green d-flex align-items-center justify-content-between">
-                           <span class="button__line line--small"></span>
-                           <span class="button__text">Get a Quote</span>
-                           <span class="button__icon d-flex align-items-center">
-                              <span class="button__line line--big"></span>
-                              <img src="./svg/carret-right.svg" alt="carret right not found" />
-                           </span>
-                        </button>
-                     </div>
-                  </div>
-               </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./images/logo.png" width="150px" height="50px" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+        <ul class="navbar-nav navbar--custom d-flex align-items-center mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">
+              <button class="button button--dark d-flex align-items-center justify-content-between">
+                <span class="button__line line--small"></span>
+                <span class="button__text">Get a Quote</span>
+                <span class="button__icon d-flex align-items-center">
+                  <span class="button__line line--big"></span>
+                  <img src="./svg/carret-right.svg" alt="carret right not found" />
+                </span>
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navigation -->
+
+  <!-- Slider -->
+  <div id="carouselExampleControls" class="carousel carousel--custom slide carousel-fade" data-bs-ride="carousel">
+    <div>
+      <div class="carousel-inner">
+        <!-- Slide -- 1 -->
+        <div class="carousel-item active">
+          <div class="d-block w-100 slide__one d-flex align-items-center justify-content-center">
+            <div class="slide__content">
+              <h1>Smart EV charging stations and <br class="d-none d-md-block" />
+                Software for all businesses</h1>
+              <button class="button button--green d-flex align-items-center justify-content-between">
+                <span class="button__line line--small"></span>
+                <span class="button__text">Get a Quote</span>
+                <span class="button__icon d-flex align-items-center">
+                  <span class="button__line line--big"></span>
+                  <img src="./svg/carret-right.svg" alt="carret right not found" />
+                </span>
+              </button>
             </div>
-         </div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="d-block w-100 slide__two d-flex align-items-center justify-content-center">
+            <div class="container">
+              <div class="slide__content">
+                <h1>Smart EV charging stations and <br class="d-none d-md-block" />
+                  Software for all businesses</h1>
+                <button class="button button--green d-flex align-items-center justify-content-between">
+                  <span class="button__line line--small"></span>
+                  <span class="button__text">Get a Quote</span>
+                  <span class="button__icon d-flex align-items-center">
+                    <span class="button__line line--big"></span>
+                    <img src="./svg/carret-right.svg" alt="carret right not found" />
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- slide 3 -->
+        <div class="carousel-item">
+          <div class="d-block w-100 slide__three d-flex align-items-center justify-content-center">
+            <div class="slide__content">
+              <h1>
+                Smart EV charging stations and <br class="d-none d-md-block" />
+                Software for all businesses
+              </h1>
+              <button class="button button--green d-flex align-items-center justify-content-between">
+                <span class="button__line line--small"></span>
+                <span class="button__text">Get a Quote</span>
+                <span class="button__icon d-flex align-items-center">
+                  <span class="button__line line--big"></span>
+                  <img src="./svg/carret-right.svg" alt="carret right not found" />
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="chargingServices">
+    <div class="container">
+      <div class="section text-center">
+        <span class="section__subtitle">best EV charging service</span>
+        <h5 class="section__title">flexible and reliable services</h5>
+        <p class="section__description">Lorem Ipsum is simply dummy It is a long established fact that a reader will be
+          distracted by the readable content of a page when looking at its layout.</p>
       </div>
 
-      <section id="chargingServices">
-         <div class="container">
-            <div class="section text-center">
-               <span class="section__subtitle">best EV charging service</span>
-               <h5 class="section__title">flexible and reliable services</h5>
-               <p class="section__description">Lorem Ipsum is simply dummy It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+      <div class="row g-4 mt-3 mt-md-5 text-center">
+        <!-- first -->
+        <div class="col-lg-6 col-xl-3">
+          <div class="card card--padding service--card">
+            <span class="card-icon">
+              <i class="fa-solid fa-person-booth"></i>
+            </span>
+            <div class="card-body">
+              <h5 class="card-title">AC Charger Services</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, adipiscing elit.</p>
             </div>
+          </div>
+        </div>
 
-            <div class="row g-4 mt-3 mt-md-5 text-center">
-               <!-- first -->
-               <div class="col-lg-6 col-xl-3">
-                  <div class="card card--padding service--card">
-                     <span class="card-icon">
-                        <i class="fa-solid fa-person-booth"></i>
-                     </span>
-                     <div class="card-body">
-                        <h5 class="card-title">AC Charger Services</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, adipiscing elit.</p>
-                     </div>
-                  </div>
-               </div>
-
-               <!-- second -->
-               <div class="col-lg-6 col-xl-3">
-                  <div class="card card--padding service--card">
-                     <span class="card-icon">
-                        <i class="fa-solid fa-car-burst"></i>
-                     </span>
-                     <div class="card-body">
-                        <h5 class="card-title">DC Charger Services</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, adipiscing elit.</p>
-                     </div>
-                  </div>
-               </div>
-
-               <!-- third -->
-               <div class="col-lg-6 col-xl-3">
-                  <div class="card card--padding service--card">
-                     <span class="card-icon">
-                        <i class="fa-solid fa-car-battery"></i>
-                     </span>
-                     <div class="card-body">
-                        <h5 class="card-title">EV Drivers Services</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, adipiscing elit.</p>
-                     </div>
-                  </div>
-               </div>
-
-               <!-- fourth -->
-               <div class="col-lg-6 col-xl-3">
-                  <div class="card card--padding service--card">
-                     <span class="card-icon">
-                        <i class="fa-solid fa-lightbulb"></i>
-                     </span>
-                     <div class="card-body">
-                        <h5 class="card-title">Point Services</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, adipiscing elit.</p>
-                     </div>
-                  </div>
-               </div>
+        <!-- second -->
+        <div class="col-lg-6 col-xl-3">
+          <div class="card card--padding service--card">
+            <span class="card-icon">
+              <i class="fa-solid fa-car-burst"></i>
+            </span>
+            <div class="card-body">
+              <h5 class="card-title">DC Charger Services</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, adipiscing elit.</p>
             </div>
-         </div>
-      </section>
+          </div>
+        </div>
 
-      <section id="about">
-         <div class="container">
-            <div class="row g-5">
-               <div class="col-lg-6">
+        <!-- third -->
+        <div class="col-lg-6 col-xl-3">
+          <div class="card card--padding service--card">
+            <span class="card-icon">
+              <i class="fa-solid fa-car-battery"></i>
+            </span>
+            <div class="card-body">
+              <h5 class="card-title">EV Drivers Services</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
 
-                <div class="d-flex align-items-center about__images">
-                  <img src="./images/about-1.jpg" src="about not found" />
-                  <img src="./images/about-2.jpg" src="about not found" />
-                </div>
+        <!-- fourth -->
+        <div class="col-lg-6 col-xl-3">
+          <div class="card card--padding service--card">
+            <span class="card-icon">
+              <i class="fa-solid fa-lightbulb"></i>
+            </span>
+            <div class="card-body">
+              <h5 class="card-title">Point Services</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-               </div>
-               <div class="col-lg-6">
-                  <div class="section text-left">
-                     <span class="section__subtitle custom--subtitle">ABOUT US</span>
-                     <h5 class="section__title">Modern Cities -Electric Vehicle Charging Stations</h5>
-                     <p class="section__description section--gray">Ecofuel Ipsum is simply dummy It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+  <section id="about">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-6">
+
+          <div class="d-flex align-items-center about__images">
+            <img src="./images/about-1.jpg" src="about not found" />
+            <img src="./images/about-2.jpg" src="about not found" />
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          <div class="section text-left">
+            <span class="section__subtitle custom--subtitle">ABOUT US</span>
+            <h5 class="section__title">Modern Cities -Electric Vehicle Charging Stations</h5>
+            <p class="section__description section--gray">Ecofuel Ipsum is simply dummy It is a long established fact
+              that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+          </div>
+          <ul class="about-list">
+            <li class="flex align-items-center">
+              <i class="fa-solid fa-check-double"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            </li>
+            <li class="flex align-items-center">
+              <i class="fa-solid fa-check-double"></i>
+              <span>Donec tempus justo ac nulla varius porttitor.</span>
+            </li>
+            <li class="flex align-items-center">
+              <i class="fa-solid fa-check-double"></i>
+              <span>Donec tempus justo ac nulla varius porttitor.</span>
+            </li>
+            <li class="flex align-items-center">
+              <i class="fa-solid fa-check-double"></i>
+              <span>Donec tempus justo ac nulla varius porttitor.</span>
+            </li>
+            <li class="flex align-items-center">
+              <i class="fa-solid fa-check-double"></i>
+              <span>Nunc sit amet dui elementum, imperdiet ante eu, laoreet ipsum.</span>
+            </li>
+            </li>
+            <li class="flex align-items-center">
+              <i class="fa-solid fa-check-double"></i>
+              <span>Vestibulum rutrum ligula sed justo maximus, sit amet lacinia magna</span>
+            </li>
+          </ul>
+          <button class="button button--dark d-flex align-items-center justify-content-between">
+            <span class="button__line line--small"></span>
+            <span class="button__text">Read More</span>
+            <span class="button__icon d-flex align-items-center">
+              <span class="button__line line--big"></span>
+              <img src="./svg/carret-right.svg" alt="carret right not found" />
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="provider">
+    <div class="overlay"> </div>
+    <div class="container provider__inner">
+      <div class="section text-center relative">
+        <span class="section__subtitle">BEST SERVICES</span>
+        <h5 class="section__title text-white">EVcharging Services Provider</h5>
+        <p class="section__description text-white">Lorem Ipsum is simply dummy It is a long established fact that a
+          reader will be distracted by the readable content of a page when looking at its layout..</p>
+      </div>
+
+      <div id="my-keen-slider" class="keen-slider mt-5">
+        <!-- first Card  -->
+        <div class="keen-slider__slide number-slide1">
+          <div class="card">
+            <div class="carousal-image">
+              <img src="./images/carousal-1.jpg" class="card-img-top card--zoom" alt="carousal not found">
+
+            </div>
+            <div class="card-body text-center carousal-card-body">
+              <span class="card-subtitle">Modern Electri</span>
+              <h5 class="card-title">Building Services</h5>
+              <p class="card-text">There are many variations of paages oLom Ipsum available, butthe majority.</p>
+              <button class="button button--transparent d-flex align-items-center justify-content-between">
+                <span class="button__line line--small"></span>
+                <span class="button__text">Read More</span>
+                <span class="button__icon d-flex align-items-center">
+                  <span class="button__line line--big"></span>
+                  <img src="./svg/carret-green.svg" alt="carret right not found" />
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- second Card  -->
+        <div class="keen-slider__slide number-slide1">
+          <div class="card">
+            <div class="carousal-image">
+              <img src="./images/carousal-2.jpg" class="card-img-top card--zoom" alt="carousal not found">
+
+            </div>
+            <div class="card-body text-center carousal-card-body">
+              <span class="card-subtitle">Modern Electri</span>
+              <h5 class="card-title">Building Services</h5>
+              <p class="card-text">There are many variations of paages oLom Ipsum available, butthe majority.</p>
+              <button class="button button--transparent d-flex align-items-center justify-content-between">
+                <span class="button__line line--small"></span>
+                <span class="button__text">Read More</span>
+                <span class="button__icon d-flex align-items-center">
+                  <span class="button__line line--big"></span>
+                  <img src="./svg/carret-green.svg" alt="carret right not found" />
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- third Card  -->
+        <div class="keen-slider__slide number-slide1">
+          <div class="card">
+            <div class="carousal-image">
+              <img src="./images/carousal-3.jpg" class="card-img-top card--zoom" alt="carousal not found">
+
+            </div>
+            <div class="card-body text-center carousal-card-body">
+              <span class="card-subtitle">Modern Electri</span>
+              <h5 class="card-title">Building Services</h5>
+              <p class="card-text">There are many variations of paages oLom Ipsum available, butthe majority.</p>
+              <button class="button button--transparent d-flex align-items-center justify-content-between">
+                <span class="button__line line--small"></span>
+                <span class="button__text">Read More</span>
+                <span class="button__icon d-flex align-items-center">
+                  <span class="button__line line--big"></span>
+                  <img src="./svg/carret-green.svg" alt="carret right not found" />
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- fourth Card  -->
+        <div class="keen-slider__slide number-slide1">
+          <div class="card">
+            <div class="carousal-image">
+              <img src="./images/carousal-4.jpg" class="card-img-top card--zoom" alt="carousal not found">
+
+            </div>
+            <div class="card-body text-center carousal-card-body">
+              <span class="card-subtitle">Modern Electri</span>
+              <h5 class="card-title">Building Services</h5>
+              <p class="card-text">There are many variations of paages oLom Ipsum available, butthe majority.</p>
+              <button class="button button--transparent d-flex align-items-center justify-content-between">
+                <span class="button__line line--small"></span>
+                <span class="button__text">Read More</span>
+                <span class="button__icon d-flex align-items-center">
+                  <span class="button__line line--big"></span>
+                  <img src="./svg/carret-green.svg" alt="carret right not found" />
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="margin-top: 30rem;">
+    <section id="features">
+      <div class="container">
+        <div class="section text-center">
+          <span class="section__subtitle">OUR FEATURES</span>
+          <h5 class="section__title">The Global EV Charging Features</h5>
+          <p class="section__description">Lorem Ipsum is simply dummy It is a long established fact that a reader will
+            be distracted by the readable content of a page when looking at its layout.</p>
+        </div>
+
+        <div class="row mt-5">
+          <!-- right side  -->
+          <div class="col-lg-4 right-content">
+            <div class="grid__container">
+              <div class="feature-card">
+                <div class="row g-4 align-items-center justify-content-between">
+                  <div class="col-md-8">
+                    <h2>High Quality</h2>
+                    <p>There are many psages of Lorem Ipsum avaible</p>
                   </div>
-                  <ul class="about-list">
-                     <li class="flex align-items-center">
-                        <i class="fa-solid fa-check-double"></i>
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                     </li>
-                     <li class="flex align-items-center">
-                        <i class="fa-solid fa-check-double"></i>
-                        <span>Donec tempus justo ac nulla varius porttitor.</span>
-                     </li>
-                     <li class="flex align-items-center">
-                        <i class="fa-solid fa-check-double"></i>
-                        <span>Donec tempus justo ac nulla varius porttitor.</span>
-                     </li>
-                     <li class="flex align-items-center">
-                      <i class="fa-solid fa-check-double"></i>
-                      <span>Donec tempus justo ac nulla varius porttitor.</span>
-                   </li>
-                     <li class="flex align-items-center">
-                      <i class="fa-solid fa-check-double"></i>
-                      <span>Nunc sit amet dui elementum, imperdiet ante eu, laoreet ipsum.</span>
-                   </li>
-                   </li>
-                     <li class="flex align-items-center">
-                      <i class="fa-solid fa-check-double"></i>
-                      <span>Vestibulum rutrum ligula sed justo maximus, sit amet lacinia magna</span>
-                   </li>
-                  </ul>
-                  <button class="button button--dark d-flex align-items-center justify-content-between">
-                    <span class="button__line line--small"></span>
-                    <span class="button__text">Read More</span>
-                    <span class="button__icon d-flex align-items-center">
-                       <span class="button__line line--big"></span>
-                       <img src="./svg/carret-right.svg" alt="carret right not found" />
+                  <div class="col-md-4">
+                    <span class="card-icon">
+                      <i class="fa-solid fa-person-booth"></i>
                     </span>
-                 </button>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <section id="provider">
-        <div class="overlay"> </div>  
-          <div class="container provider__inner">
-            <div class="section text-center relative">
-              <span class="section__subtitle">BEST SERVICES</span>
-              <h5 class="section__title text-white">EVcharging Services Provider</h5>
-              <p class="section__description text-white">Lorem Ipsum is simply dummy It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..</p>
-           </div>
-
-           <div id="my-keen-slider" class="keen-slider mt-5">
-             <!-- first Card  -->
-            <div class="keen-slider__slide number-slide1">
-                  <div class="card" >
-                    <div class="carousal-image">
-                      <img src="./images/carousal-1.jpg" class="card-img-top card--zoom" alt="carousal not found">
-                      
-                    </div>
-                    <div class="card-body text-center carousal-card-body">
-                      <span class="card-subtitle">Modern Electri</span>
-                      <h5 class="card-title">Building Services</h5>
-                      <p class="card-text">There are many variations of paages oLom Ipsum available, butthe majority.</p>
-                      <button class="button button--transparent d-flex align-items-center justify-content-between">
-                        <span class="button__line line--small"></span>
-                        <span class="button__text">Read More</span>
-                        <span class="button__icon d-flex align-items-center">
-                           <span class="button__line line--big"></span>
-                           <img src="./svg/carret-green.svg" alt="carret right not found" />
-                        </span>
-                     </button>
-                    </div>
-                  </div>
-            </div>
-
-               <!-- second Card  -->
-               <div class="keen-slider__slide number-slide1">
-                <div class="card" >
-                  <div class="carousal-image">
-                    <img src="./images/carousal-2.jpg" class="card-img-top card--zoom" alt="carousal not found">
-                    
-                  </div>
-                  <div class="card-body text-center carousal-card-body">
-                    <span class="card-subtitle">Modern Electri</span>
-                    <h5 class="card-title">Building Services</h5>
-                    <p class="card-text">There are many variations of paages oLom Ipsum available, butthe majority.</p>
-                    <button class="button button--transparent d-flex align-items-center justify-content-between">
-                      <span class="button__line line--small"></span>
-                      <span class="button__text">Read More</span>
-                      <span class="button__icon d-flex align-items-center">
-                         <span class="button__line line--big"></span>
-                         <img src="./svg/carret-green.svg" alt="carret right not found" />
-                      </span>
-                   </button>
                   </div>
                 </div>
               </div>
 
-                <!-- third Card  -->
-                <div class="keen-slider__slide number-slide1">
-                  <div class="card" >
-                    <div class="carousal-image">
-                      <img src="./images/carousal-3.jpg" class="card-img-top card--zoom" alt="carousal not found">
-                      
-                    </div>
-                    <div class="card-body text-center carousal-card-body">
-                      <span class="card-subtitle">Modern Electri</span>
-                      <h5 class="card-title">Building Services</h5>
-                      <p class="card-text">There are many variations of paages oLom Ipsum available, butthe majority.</p>
-                      <button class="button button--transparent d-flex align-items-center justify-content-between">
-                        <span class="button__line line--small"></span>
-                        <span class="button__text">Read More</span>
-                        <span class="button__icon d-flex align-items-center">
-                           <span class="button__line line--big"></span>
-                           <img src="./svg/carret-green.svg" alt="carret right not found" />
-                        </span>
-                     </button>
-                    </div>
+              <div class="feature-card">
+                <div class="row g-4 align-items-center justify-content-between">
+                  <div class="col-md-8">
+                    <h2>High Quality</h2>
+                    <p>There are many psages of Lorem Ipsum avaible</p>
+                  </div>
+                  <div class="col-md-4">
+                    <span class="card-icon">
+                      <i class="fa-solid fa-person-booth"></i>
+                    </span>
                   </div>
                 </div>
+              </div>
 
-                 <!-- fourth Card  -->
-                 <div class="keen-slider__slide number-slide1">
-                  <div class="card" >
-                    <div class="carousal-image">
-                      <img src="./images/carousal-4.jpg" class="card-img-top card--zoom" alt="carousal not found">
-                      
-                    </div>
-                    <div class="card-body text-center carousal-card-body">
-                      <span class="card-subtitle">Modern Electri</span>
-                      <h5 class="card-title">Building Services</h5>
-                      <p class="card-text">There are many variations of paages oLom Ipsum available, butthe majority.</p>
-                      <button class="button button--transparent d-flex align-items-center justify-content-between">
-                        <span class="button__line line--small"></span>
-                        <span class="button__text">Read More</span>
-                        <span class="button__icon d-flex align-items-center">
-                           <span class="button__line line--big"></span>
-                           <img src="./svg/carret-green.svg" alt="carret right not found" />
-                        </span>
-                     </button>
-                    </div>
+              <div class="feature-card">
+                <div class="row g-4 align-items-center justify-content-between">
+                  <div class="col-md-8">
+                    <h2>High Quality</h2>
+                    <p>There are many psages of Lorem Ipsum avaible</p>
+                  </div>
+                  <div class="col-md-4">
+                    <span class="card-icon">
+                      <i class="fa-solid fa-person-booth"></i>
+                    </span>
                   </div>
                 </div>
-           </div>
+              </div>
+            </div>
           </div>
-      </section>
+          <div class="col-lg-4 d-none d-lg-flex align-items-center">
+            <img src="./images/gas-station.png" class="feature--image" />
+          </div>
+          <div class="col-lg-4">
+            <div class="grid__container">
+              <div class="feature-card">
+                <div class="row g-4 align-items-center justify-content-between">
+                  <div class="col-md-4">
+                    <span class="card-icon">
+                      <i class="fa-solid fa-person-booth"></i>
+                    </span>
+                  </div>
+                  <div class="col-md-8">
+                    <h2>High Quality</h2>
+                    <p>There are many psages of Lorem Ipsum avaible</p>
+                  </div>
+                </div>
+              </div>
 
-      <div style="margin-top: 30rem;">
-        
+              <div class="feature-card">
+                <div class="row g-4 align-items-center justify-content-between">
+                  <div class="col-md-4">
+                    <span class="card-icon">
+                      <i class="fa-solid fa-person-booth"></i>
+                    </span>
+                  </div>
+                  <div class="col-md-8">
+                    <h2>High Quality</h2>
+                    <p>There are many psages of Lorem Ipsum avaible</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-card">
+                <div class="row g-4 align-items-center justify-content-between">
+                  <div class="col-md-4">
+                    <span class="card-icon">
+                      <i class="fa-solid fa-person-booth"></i>
+                    </span>
+                  </div>
+                  <div class="col-md-8">
+                    <h2>High Quality</h2>
+                    <p>There are many psages of Lorem Ipsum avaible</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+  </div>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.6.6/keen-slider.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.6.6/keen-slider.min.js"></script>
 
-      <script src="./js/main.js"></script>
-   </body>
+  <script src="./js/main.js"></script>
+</body>
+
 </html>
