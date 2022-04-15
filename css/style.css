@@ -227,7 +227,7 @@ body {
    font-size: var(--header-lg);
    font-family: 'Futura PT Medium';
    margin-bottom: 2rem;
-   white-space: nowrap;
+   /* white-space: nowrap; */
 }
 
 #chargingServices,
@@ -255,12 +255,14 @@ body {
 }
 
 .custom--subtitle {
-  margin-inline: 0;
-  padding-inline: 0;
-  width: 130px;
+   margin-inline: 0;
+   padding-inline: 0;
+   width: 130px;
 }
 
-.custom--subtitle::after {display: none;}
+.custom--subtitle::after {
+   display: none;
+}
 
 .section__subtitle::before,
 .section__subtitle::after {
@@ -349,10 +351,49 @@ body {
    background: var(--white-clr);
 }
 
+.about-list {
+   list-style: none;
+   padding-inline-start: 0;
+   display: grid;
+   gap: 10px;
+   margin-block-end: 2rem;
+}
+
+.about-list i {
+   color: var(--green--light);
+}
+
+.about-list span {
+   font-size: 18px;
+   font-family: 'Futura PT Book';
+}
+
+.about-list span,
+.section--gray {
+   color: var(--gray-1);
+}
+
+.about__images {
+   position: relative;
+   height: 100%;
+}
+
+.about__images > *:first-of-type {
+   width: 75%;
+}
+
+.about__images > *:last-of-type {
+   width: 65%;
+   position: absolute;
+   right: 0;
+   bottom: -2px;
+}
+
 /* Media Queries  */
 @media screen and (max-width: 768px) {
    .section__description,
-   .service--card .card-text {
+   .service--card .card-text,
+   .about-list span {
       font-size: 16px;
    }
 
@@ -360,4 +401,13 @@ body {
    #about {
       padding-block: 3rem;
    }
+
+   .about__images > *:last-of-type {
+      display: none;
+   }
+
+   .about__images > *:first-of-type {
+    margin-inline: auto;
+    width: 100%;
+ }
 }
