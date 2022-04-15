@@ -18,7 +18,7 @@ const navigation = slider => {
       return div
    }
 
-   const arrowMarkup = (remove) => {
+   const arrowMarkup = remove => {
       if (remove) {
          removeElement(arrowLeft)
          removeElement(arrowRight)
@@ -94,7 +94,7 @@ var slider = new KeenSlider(
       autoplay: true,
       breakpoints: {
          '(min-width: 768px)': {
-            slides: { perView: 2, spacing: 5 },
+            slides: { perView: 2, spacing: 15 },
          },
          '(min-width: 1000px)': {
             slides: { perView: 3, spacing: 30 },
@@ -104,6 +104,49 @@ var slider = new KeenSlider(
    },
    [
       navigation,
+      slider => {
+         let timeout
+         let mouseOver = false
+         function clearNextTimeout() {
+            clearTimeout(timeout)
+         }
+         function nextTimeout() {
+            clearTimeout(timeout)
+            if (mouseOver) return
+            timeout = setTimeout(() => {
+               slider.next()
+            }, 2500)
+         }
+         slider.on('created', () => {
+            slider.container.addEventListener('mouseover', () => {
+               mouseOver = true
+               clearNextTimeout()
+            })
+            slider.container.addEventListener('mouseout', () => {
+               mouseOver = false
+               nextTimeout()
+            })
+            nextTimeout()
+         })
+         slider.on('dragStarted', clearNextTimeout)
+         slider.on('animationEnded', nextTimeout)
+         slider.on('updated', nextTimeout)
+      },
+   ]
+)
+
+// Feature slider
+
+var slider = new KeenSlider(
+   '#my-keen-slider2',
+   {
+      loop: true,
+      mode: 'snap',
+      autoplay: true,
+      slides: { perView: 1 },
+   },
+   [
+    //   navigation,
       slider => {
          let timeout
          let mouseOver = false
