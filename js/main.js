@@ -1,23 +1,24 @@
-function navigation(slider) {
+const navigation = slider => {
    let wrapper, dots, arrowLeft, arrowRight
 
-   function markup(remove) {
+   const markup = remove => {
       wrapperMarkup(remove)
       dotMarkup(remove)
       arrowMarkup(remove)
    }
 
-   function removeElement(elment) {
+   const removeElement = elment => {
       elment.parentNode.removeChild(elment)
    }
-   function createDiv(className) {
+
+   const createDiv = className => {
       var div = document.createElement('div')
       var classNames = className.split(' ')
       classNames.forEach(name => div.classList.add(name))
       return div
    }
 
-   function arrowMarkup(remove) {
+   const arrowMarkup = (remove) => {
       if (remove) {
          removeElement(arrowLeft)
          removeElement(arrowRight)
@@ -85,16 +86,51 @@ function navigation(slider) {
    })
 }
 
-var slider = new KeenSlider('#my-keen-slider', {
-   loop: true,
-   mode: 'snap',
-   breakpoints: {
-      '(min-width: 768px)': {
-         slides: { perView: 2, spacing: 5 },
+var slider = new KeenSlider(
+   '#my-keen-slider',
+   {
+      loop: true,
+      mode: 'snap',
+      autoplay: true,
+      breakpoints: {
+         '(min-width: 768px)': {
+            slides: { perView: 2, spacing: 5 },
+         },
+         '(min-width: 1000px)': {
+            slides: { perView: 3, spacing: 30 },
+         },
       },
-      '(min-width: 1000px)': {
-         slides: { perView: 3, spacing: 30 },
-      },
+      slides: { perView: 1 },
    },
-   slides: { perView: 1 },
-}, [navigation])
+   [
+      navigation,
+      slider => {
+         let timeout
+         let mouseOver = false
+         function clearNextTimeout() {
+            clearTimeout(timeout)
+         }
+         function nextTimeout() {
+            clearTimeout(timeout)
+            if (mouseOver) return
+            timeout = setTimeout(() => {
+               slider.next()
+            }, 2500)
+         }
+         slider.on('created', () => {
+            slider.container.addEventListener('mouseover', () => {
+               mouseOver = true
+               clearNextTimeout()
+            })
+            slider.container.addEventListener('mouseout', () => {
+               mouseOver = false
+               nextTimeout()
+            })
+            nextTimeout()
+         })
+         slider.on('dragStarted', clearNextTimeout)
+         slider.on('animationEnded', nextTimeout)
+         slider.on('updated', nextTimeout)
+      },
+   ]
+)
