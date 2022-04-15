@@ -555,6 +555,22 @@ body {
    font-size: 2.75rem;
 }
 
+.dark--bg {
+  background: rgb(44,44,44);
+}
+
+#progress {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.title--white {
+  color: #fff;
+}
+
 /* Media Queries  */
 @media screen and (max-width: 768px) {
    .section__description,
@@ -566,7 +582,8 @@ body {
    #chargingServices,
    #about,
    #provider,
-   #features {
+   #features,
+   #progress {
       padding-block: 3rem;
    }
 
@@ -587,4 +604,11 @@ body {
    .left-content {
       text-align: center !important;
    }
+}
+
+
+@media screen and (min-width: 768px) {
+  .padding--force {
+    padding-left: 95px !important;
+  }
 }

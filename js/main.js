@@ -158,7 +158,7 @@ var slider = new KeenSlider(
             if (mouseOver) return
             timeout = setTimeout(() => {
                slider.next()
-            }, 2500)
+            }, 4500)
          }
          slider.on('created', () => {
             slider.container.addEventListener('mouseover', () => {
