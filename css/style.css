@@ -508,6 +508,46 @@ body {
    background: var(--green--light);
 }
 
+/* Info Divider */
+#infoDivider {
+   min-height: 200px;
+   padding-block: 2rem;
+   background: var(--green--light);
+   display: flex;
+   align-items: center;
+}
+
+.info {
+   color: var(--white-clr);
+   display: flex;
+   align-items: center;
+   height: 100%;
+   gap: 20px;
+   border-right: 1px solid rgba(255, 255, 255, 0.163);
+}
+
+.info__content p {
+   font-size: 17px;
+   font-family:  'Futura PT Book';
+   text-transform: uppercase;
+}
+
+.info i {
+   font-size: 70px;
+}
+
+.info__content {
+   flex: 1;
+}
+
+.info__content h1 {
+   font-size: 45px;
+    line-height: 48px;
+    font-weight: 600;
+    font-family: 'Futura PT Heavy' ;
+    margin: 0;
+}
+
 /* Features */
 .grid__container {
    display: grid;
@@ -654,6 +694,15 @@ body {
    .about-list span {
       font-size: 16px;
    }
+
+   .info {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+      padding-block: 1rem;
+   }
+   
+
 
    #chargingServices,
    #about,
