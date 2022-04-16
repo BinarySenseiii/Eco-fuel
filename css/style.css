@@ -244,7 +244,8 @@ body {
 #chargingServices,
 #about,
 #provider,
-#features {
+#features,
+#pricing {
    padding-block: 6rem;
 }
 
@@ -528,7 +529,7 @@ body {
 
 .info__content p {
    font-size: 17px;
-   font-family:  'Futura PT Book';
+   font-family: 'Futura PT Book';
    text-transform: uppercase;
 }
 
@@ -542,10 +543,10 @@ body {
 
 .info__content h1 {
    font-size: 45px;
-    line-height: 48px;
-    font-weight: 600;
-    font-family: 'Futura PT Heavy' ;
-    margin: 0;
+   line-height: 48px;
+   font-weight: 600;
+   font-family: 'Futura PT Heavy';
+   margin: 0;
 }
 
 /* Features */
@@ -679,6 +680,92 @@ body {
    overflow: hidden;
 }
 
+/* Pricing Card */
+.pricing-card {
+   width: 100%;
+   background: #f7f9fa;
+   padding-block: 3rem;
+   padding-inline: 1.75rem;
+   display: grid;
+   gap: 20px;
+   border-radius: 5px;
+}
+
+.pricing-status {
+   text-align: center;
+}
+
+.pricing-list {
+   list-style: none;
+   display: grid;
+   gap: 20px;
+   padding: 0;
+}
+
+.pricing-list > li,
+.pricing-btn {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+}
+
+.pricing-btn {
+   justify-content: center;
+}
+
+.pricing-status {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.155);
+   padding-bottom: 2rem;
+}
+
+.pricing-status h2 {
+   font-family: 'Futura PT Medium';
+   text-transform: uppercase;
+   font-size: 20px;
+   line-height: 28px;
+   letter-spacing: 0.1em;
+   font-weight: 500;
+   position: relative;
+   color: var(--green--light);
+   width: 100%;
+}
+
+.pricing-status h1 {
+   font-weight: 500;
+   margin: 25px 0 0px;
+   font-size: 54px;
+   line-height: 62px;
+   font-family: 'Futura PT Demi';
+}
+
+.pricing-status span {
+   font-size: 18px;
+}
+
+.pricing-list i {
+   color: var(--green--light);
+}
+
+.CARD--green {
+   background: var(--green--light);
+}
+
+.CARD--green h2,
+.CARD--green h1,
+.CARD--green span,
+.CARD--green .pricing-list,
+.CARD--green i {
+   color: var(--white-clr);
+}
+
+
+.pricing-list li {
+   font-family: 'Futura PT Book';
+   font-size: 18px;
+   color: var(--gray-1);
+}
+
 /* Media Queries  */
 @media screen and (max-width: 1200px) {
    .progress-grid {
@@ -701,14 +788,13 @@ body {
       gap: 20px;
       padding-block: 1rem;
    }
-   
-
 
    #chargingServices,
    #about,
    #provider,
    #features,
-   #progress {
+   #progress,
+   #pricing {
       padding-block: 3rem;
    }
 
