@@ -556,22 +556,98 @@ body {
 }
 
 .dark--bg {
-  background: rgb(44,44,44);
+   background: rgb(44, 44, 44);
 }
 
 #progress {
-  min-height: 500px;
-  display: flex;
-  align-items: center;
+   min-height: 650px;
+   display: flex;
+   align-items: center;
+   overflow: hidden;
 }
 
-
-
 .title--white {
-  color: #fff;
+   color: #fff;
+}
+
+.progress-container {
+   display: grid;
+   gap: 20px;
+   margin-block: 2rem;
+}
+
+.progress-content span,
+.progress-content h2 {
+   color: var(--green--light);
+   font-size: 20px;
+   font-weight: 500;
+   font-family: 'Futura PT Medium';
+}
+
+.progress-content h2 {
+   color: var(--white-clr);
+}
+
+.progress-line {
+   width: 100%;
+   background: var(--white-clr);
+   height: 4px;
+   margin-top: 10px;
+   border-radius: 3px;
+}
+
+.progress-line--inner {
+   height: 100%;
+   background: var(--green--light);
+}
+
+.line--1 {
+   width: 98%;
+}
+
+.line--2 {
+   width: 90%;
+}
+
+.line--3 {
+   width: 80%;
+}
+
+.image--trick {
+   opacity: 0;
+   pointer-events: none;
+}
+
+.progress__image {
+   background-image: url('../images/carousal-1.jpg');
+   position: absolute;
+   inset: 0;
+   height: 100%;
+   width: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.progress-grid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 30px;
+   height: 650px;
+}
+.grid-child {
+   position: relative;
+   overflow: hidden;
 }
 
 /* Media Queries  */
+@media screen and (max-width: 1200px) {
+   .progress-grid {
+      width: 100%;
+      grid-template-columns: 100%;
+      height: 500px;
+   }
+}
+
 @media screen and (max-width: 768px) {
    .section__description,
    .service--card .card-text,
@@ -597,7 +673,7 @@ body {
    }
 
    .reversed {
-    flex-direction: column-reverse
+      flex-direction: column-reverse;
    }
 
    .right-content,
@@ -606,9 +682,16 @@ body {
    }
 }
 
+@media screen and (min-width: 1200px) {
+   .padding--force {
+      padding-left: 12% !important;
+   }
 
-@media screen and (min-width: 768px) {
-  .padding--force {
-    padding-left: 95px !important;
-  }
+   .progress-right {
+      padding-block-start: 3rem;
+   }
+
+   .progress--btn {
+      margin-bottom: 14rem;
+   }
 }
