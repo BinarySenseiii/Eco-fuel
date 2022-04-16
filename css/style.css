@@ -766,6 +766,24 @@ body {
    color: var(--gray-1);
 }
 
+/* Application */ 
+#application {
+   background: #F7F9FA;
+   padding-block: 5rem;
+}
+
+.app--image {
+   width: 550px;
+   display: inline-block;
+   position: absolute;
+   bottom: -79px;
+   left: 0;
+}
+
+.relative {
+   position: relative !important;
+}
+
 /* Media Queries  */
 @media screen and (max-width: 1200px) {
    .progress-grid {
@@ -794,7 +812,8 @@ body {
    #provider,
    #features,
    #progress,
-   #pricing {
+   #pricing,
+   #application {
       padding-block: 3rem;
    }
 
@@ -828,5 +847,9 @@ body {
 
    .progress--btn {
       margin-bottom: 14rem;
+   }
+
+   #application {
+      margin-top: 7rem;
    }
 }
