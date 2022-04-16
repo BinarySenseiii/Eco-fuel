@@ -177,3 +177,54 @@ var slider = new KeenSlider(
       },
    ]
 )
+
+
+// testimonial
+var slider = new KeenSlider(
+   '#my-keen-slider3',
+   {
+      loop: true,
+      mode: 'snap',
+      autoplay: true,
+      breakpoints: {
+         '(min-width: 768px)': {
+            slides: { perView: 2, spacing: 15 },
+         },
+         '(min-width: 1000px)': {
+            slides: { perView: 3, spacing: 30 },
+         },
+      },
+      slides: { perView: 1 },
+   },
+   [
+      navigation,
+      slider => {
+         let timeout
+         let mouseOver = false
+         function clearNextTimeout() {
+            clearTimeout(timeout)
+         }
+         function nextTimeout() {
+            clearTimeout(timeout)
+            if (mouseOver) return
+            timeout = setTimeout(() => {
+               slider.next()
+            }, 2500)
+         }
+         slider.on('created', () => {
+            slider.container.addEventListener('mouseover', () => {
+               mouseOver = true
+               clearNextTimeout()
+            })
+            slider.container.addEventListener('mouseout', () => {
+               mouseOver = false
+               nextTimeout()
+            })
+            nextTimeout()
+         })
+         slider.on('dragStarted', clearNextTimeout)
+         slider.on('animationEnded', nextTimeout)
+         slider.on('updated', nextTimeout)
+      },
+   ]
+)
