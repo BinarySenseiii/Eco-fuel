@@ -838,6 +838,26 @@ body {
    border-top-color: transparent !important;
 }
 
+.date {
+   height: 60px;
+   width: 60px;
+   background: var(--green--light);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: var(--white-clr);
+   flex-direction: column;
+   padding: 1rem;
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   font-family: 'Futura PT Book';
+} 
+
+.data span {
+   display: block;
+}
+
 /* Media Queries  */
 @media screen and (max-width: 1200px) {
    .progress-grid {
