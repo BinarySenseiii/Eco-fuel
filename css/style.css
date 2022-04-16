@@ -811,6 +811,33 @@ body {
    margin-top: 12rem;
 }
 
+/* Brand  */
+#brand {
+   padding-block: 4rem;
+}
+
+.brand-modals img {
+   width: 60%;
+   filter: grayscale(1);
+   transition: all 0.5s ease-in;
+}
+
+.brand-modals img:hover {
+   filter: grayscale(0);
+}
+
+.modal-card {
+   border: 1px solid transparent;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 200px;
+}
+
+.no-topBorder {
+   border-top-color: transparent !important;
+}
+
 /* Media Queries  */
 @media screen and (max-width: 1200px) {
    .progress-grid {
@@ -856,7 +883,8 @@ body {
    #features,
    #progress,
    #pricing,
-   #application {
+   #application,
+   #brand {
       padding-block: 3rem;
    }
 
