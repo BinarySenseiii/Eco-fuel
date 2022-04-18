@@ -909,14 +909,14 @@ body {
    display: grid;
 }
 
-.contact__link {
+.footer-contacts .contact__link {
    padding: 0;
    border: 0;
    margin: 0;
    font-size: 18px;
 }
 
-.contact__link i {
+.footer-contacts .contact__link i {
    color: var(--green--light);
 }
 
