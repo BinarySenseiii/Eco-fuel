@@ -1,3 +1,5 @@
+new WOW().init()
+
 const navigation = slider => {
    let wrapper, dots, arrowLeft, arrowRight
 
@@ -146,7 +148,7 @@ var slider = new KeenSlider(
       slides: { perView: 1 },
    },
    [
-    //   navigation,
+      //   navigation,
       slider => {
          let timeout
          let mouseOver = false
@@ -177,7 +179,6 @@ var slider = new KeenSlider(
       },
    ]
 )
-
 
 // testimonial
 var slider = new KeenSlider(
@@ -228,7 +229,6 @@ var slider = new KeenSlider(
       },
    ]
 )
-
 
 // Blog
 var slider = new KeenSlider(

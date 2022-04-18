@@ -17,6 +17,8 @@
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.6.6/keen-slider.min.css" />
 </head>
 
@@ -26,7 +28,7 @@
     <div class="container">
       <div class="divider__inner d-flex align-items-center justify-content-between">
         <div class="divider__contacts">
-          <div class="contact">
+          <div class="contact wow bounceInUp">
             <a class="contact__link d-flex align-items-center" href="tel:+1800001658" target="_self">
               <i class="fas fa-phone"></i>
               <span class="contact__info">+1800001658</span>
@@ -37,8 +39,8 @@
             </a>
           </div>
         </div>
-        <div class="divider__socials">
-          <ul class="social d-flex align-items-center">
+        <div class="divider__socials ">
+          <ul class="social d-flex align-items-center wow bounceInUp">
             <li class="social__list">
               <a href="#" class="social__link">
                 <i class="fab fa-facebook-f"></i>
@@ -67,7 +69,7 @@
   <!-- End Divider -->
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light wow fadeIn" data-wow-duration="3s">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="./images/logo.png" width="150px" height="50px" />
@@ -119,9 +121,10 @@
         <div class="carousel-item active">
           <div class="d-block w-100 slide__one d-flex align-items-center justify-content-center">
             <div class="slide__content">
-              <h1>Smart EV charging stations and <br class="d-none d-md-block" />
+              <h1 class=" wow bounceIn">Smart EV charging stations and <br class="d-none d-md-block" />
                 Software for all businesses</h1>
-              <button class="button button--green d-flex align-items-center justify-content-between">
+              <button class="button button--green d-flex align-items-center justify-content-between wow bounceInUp"
+                data-wow-duration="3s">
                 <span class="button__line line--small"></span>
                 <span class="button__text">Get a Quote</span>
                 <span class="button__icon d-flex align-items-center">
@@ -137,9 +140,10 @@
           <div class="d-block w-100 slide__two d-flex align-items-center justify-content-center">
             <div class="container">
               <div class="slide__content">
-                <h1>Smart EV charging stations and <br class="d-none d-md-block" />
+                <h1 class=" wow bounceIn">Smart EV charging stations and <br class="d-none d-md-block" />
                   Software for all businesses</h1>
-                <button class="button button--green d-flex align-items-center justify-content-between">
+                <button class="button button--green d-flex align-items-center justify-content-between wow bounceInUp"
+                  data-wow-duration="3s">
                   <span class="button__line line--small"></span>
                   <span class="button__text">Get a Quote</span>
                   <span class="button__icon d-flex align-items-center">
@@ -155,11 +159,12 @@
         <div class="carousel-item">
           <div class="d-block w-100 slide__three d-flex align-items-center justify-content-center">
             <div class="slide__content">
-              <h1>
+              <h1 class="wow bounceIn">
                 Smart EV charging stations and <br class="d-none d-md-block" />
                 Software for all businesses
               </h1>
-              <button class="button button--green d-flex align-items-center justify-content-between">
+              <button class="button button--green d-flex align-items-center justify-content-between wow bounceInUp"
+                data-wow-duration="3s">
                 <span class="button__line line--small"></span>
                 <span class="button__text">Get a Quote</span>
                 <span class="button__icon d-flex align-items-center">
@@ -177,7 +182,7 @@
   <!-- charging Services -->
   <section id="chargingServices">
     <div class="container">
-      <div class="section text-center">
+      <div class="section text-center wow bounceIn">
         <span class="section__subtitle">best EV charging service</span>
         <h5 class="section__title">flexible and reliable services</h5>
         <p class="section__description">Lorem Ipsum is simply dummy It is a long established fact that a reader will be
@@ -186,7 +191,7 @@
 
       <div class="row g-4 mt-3 mt-md-5 text-center">
         <!-- first -->
-        <div class="col-lg-6 col-xl-3">
+        <div class="col-lg-6 col-xl-3 wow fadeIn" data-wow-delay=".4s">
           <div class="card card--padding service--card">
             <span class="card-icon">
               <i class="fa-solid fa-person-booth"></i>
@@ -199,7 +204,7 @@
         </div>
 
         <!-- second -->
-        <div class="col-lg-6 col-xl-3">
+        <div class="col-lg-6 col-xl-3 wow fadeIn" data-wow-delay=".5s">
           <div class="card card--padding service--card">
             <span class="card-icon">
               <i class="fa-solid fa-car-burst"></i>
@@ -212,7 +217,7 @@
         </div>
 
         <!-- third -->
-        <div class="col-lg-6 col-xl-3">
+        <div class="col-lg-6 col-xl-3 wow fadeIn" data-wow-delay=".6s">
           <div class="card card--padding service--card">
             <span class="card-icon">
               <i class="fa-solid fa-car-battery"></i>
@@ -225,7 +230,7 @@
         </div>
 
         <!-- fourth -->
-        <div class="col-lg-6 col-xl-3">
+        <div class="col-lg-6 col-xl-3 wow fadeIn" data-wow-delay=".7s">
           <div class="card card--padding service--card">
             <span class="card-icon">
               <i class="fa-solid fa-lightbulb"></i>
@@ -244,7 +249,7 @@
   <section id="about">
     <div class="container">
       <div class="row g-5">
-        <div class="col-lg-6">
+        <div class="col-lg-6 wow fadeIn">
 
           <div class="d-flex align-items-center about__images">
             <img src="./images/about-1.jpg" src="about not found" />
@@ -254,12 +259,13 @@
         </div>
         <div class="col-lg-6">
           <div class="section text-left">
-            <span class="section__subtitle custom--subtitle">ABOUT US</span>
-            <h5 class="section__title">Modern Cities -Electric Vehicle Charging Stations</h5>
-            <p class="section__description section--gray">Ecofuel Ipsum is simply dummy It is a long established fact
+            <span class="section__subtitle custom--subtitle wow fadeInUp">ABOUT US</span>
+            <h5 class="section__title wow fadeInUp">Modern Cities -Electric Vehicle Charging Stations</h5>
+            <p class="section__description section--gray wow fadeInUp" data-wow-duration="2s">Ecofuel Ipsum is simply
+              dummy It is a long established fact
               that a reader will be distracted by the readable content of a page when looking at its layout.</p>
           </div>
-          <ul class="about-list">
+          <ul class="about-list wow fadeInUp">
             <li class="flex align-items-center">
               <i class="fa-solid fa-check-double"></i>
               <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
@@ -286,7 +292,7 @@
               <span>Vestibulum rutrum ligula sed justo maximus, sit amet lacinia magna</span>
             </li>
           </ul>
-          <button class="button button--dark d-flex align-items-center justify-content-between">
+          <button class="button button--dark d-flex align-items-center justify-content-between wow fadeInUp">
             <span class="button__line line--small"></span>
             <span class="button__text">Read More</span>
             <span class="button__icon d-flex align-items-center">
@@ -302,15 +308,15 @@
   <!-- provider -->
   <section id="provider">
     <div class="overlay"> </div>
-    <div class="container provider__inner">
-      <div class="section text-center relative">
+    <div class="container provider__inner ">
+      <div class="section text-center relative wow bounce">
         <span class="section__subtitle">BEST SERVICES</span>
         <h5 class="section__title text-white">EVcharging Services Provider</h5>
         <p class="section__description text-white">Lorem Ipsum is simply dummy It is a long established fact that a
           reader will be distracted by the readable content of a page when looking at its layout..</p>
       </div>
 
-      <div id="my-keen-slider" class="keen-slider mt-5">
+      <div id="my-keen-slider" class="keen-slider mt-5 wow bounce slideInLeft" data-wow-duration="1s">
         <!-- first Card  -->
         <div class="keen-slider__slide number-slide1">
           <div class="card">
@@ -410,14 +416,14 @@
     <!-- Features -->
     <section id="features">
       <div class="container">
-        <div class="section text-center">
+        <div class="section text-center  wow bounce">
           <span class="section__subtitle">OUR FEATURES</span>
           <h5 class="section__title">The Global EV Charging Features</h5>
           <p class="section__description">Lorem Ipsum is simply dummy It is a long established fact that a reader will
             be distracted by the readable content of a page when looking at its layout.</p>
         </div>
 
-        <div id="my-keen-slider2" class="keen-slider mt-3">
+        <div id="my-keen-slider2" class="keen-slider mt-3 wow slideInRight" data-wow-duration="1s">
 
           <!-- Slider 1 -->
           <div class="keen-slider__slide number-slide1">
@@ -727,7 +733,7 @@
       </div>
     </section>
     <!-- info- Dividers -->
-    <section id="infoDivider">
+    <section id="infoDivider" class="wow fadeIn" data-wow-duration="2s">
       <div class="container">
         <div class="row g-5">
           <!-- first -->
@@ -775,19 +781,21 @@
     </section>
 
     <!-- Progress -->
-    <section id="progress" class="dark--bg">
+    <section id="progress" class="dark--bg wow fadeIn">
       <div class="progress-grid">
         <div class="padding--force">
           <div class="container d-flex flex-column justify-content-center progress-right" style="height: 100%">
             <div class="section text-left">
-              <span class="section__subtitle custom--subtitle">ABOUT US</span>
-              <h5 class="section__title title--white">We Provide Best Charging Services For Your Car</h5>
-              <p class="section__description section--gray">Ecofuel Ipsum is simply dummy It is a long established fact
+              <span class="section__subtitle custom--subtitle wow bounceInUp" data-wow-delay=".5s">ABOUT US</span>
+              <h5 class="section__title title--white wow bounceInUp" data-wow-delay=".6s">We Provide Best Charging
+                Services For Your Car</h5>
+              <p class="section__description section--gray wow bounceInUp" data-wow-delay=".7s">Ecofuel Ipsum is simply
+                dummy It is a long established fact
                 that a reader will be distracted by the readable content of a page when looking at its layout.</p>
             </div>
 
             <!-- progress goes here -->
-            <div class="progress-container">
+            <div class="progress-container wow bounceInUp"  data-wow-delay=".8s">
               <div class="progress_">
                 <div class="progress-content d-flex align-items-center justify-content-between">
                   <h2>Fast, Flexible Deployment</h2>
@@ -817,7 +825,8 @@
               </div>
             </div>
 
-            <button class="button button--green d-flex align-items-center progress--btn justify-content-between">
+            <button
+              class="button button--green d-flex align-items-center progress--btn justify-content-between wow bounceInUp"  data-wow-delay=".8s">
               <span class="button__line line--small"></span>
               <span class="button__text">Read More</span>
               <span class="button__icon d-flex align-items-center">
@@ -840,7 +849,7 @@
   <!-- Pricing -->
   <section id="pricing">
     <div class="container">
-      <div class="section text-center relative">
+      <div class="section text-center relative wow bounceInUp">
         <span class="section__subtitle">PRICING & PLANS</span>
         <h5 class="section__title ">Our Best Price Plan</h5>
         <p class="section__description ">Lorem Ipsum is simply dummy It is a long established fact that a
@@ -849,7 +858,7 @@
 
       <!-- pricing Cards -->
       <div class="row g-3 mt-3 mt-md-5">
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
           <div class="pricing-card">
             <div class="pricing-status">
               <h2>BASIC</h2>
@@ -892,7 +901,7 @@
         </div>
 
         <!-- 2nd Price -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".8s">
           <div class="pricing-card CARD--green">
             <div class="pricing-status">
               <h2>STANDARD</h2>
@@ -935,8 +944,7 @@
         </div>
 
         <!-- 3rd price -->
-        <!-- 2nd Price -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".9s">
           <div class="pricing-card">
             <div class="pricing-status">
               <h2>BUSINESS</h2>
@@ -982,7 +990,7 @@
   </section>
 
   <!-- Application -->
-  <section id="application" class="d-flex align-items-center">
+  <section id="application" class="d-flex align-items-center wow fadeIn" data-wow-duration="4s">
     <div class="container d-flex align-items-center" stytle="height: 100%;">
       <div class="row g-3 g-lg-0" style="width: 100%;">
         <div class="col-lg-6 relative d-none d-lg-flex">
@@ -1009,14 +1017,14 @@
   <section id="provider">
     <div class="overlay"> </div>
     <div class="container provider__inner">
-      <div class="section text-center relative">
+      <div class="section text-center relative wow bounceInDown">
         <span class="section__subtitle">OUR TESTIMONIAL</span>
         <h5 class="section__title text-white">What Our Clients Say</h5>
         <p class="section__description text-white">Lorem Ipsum is simply dummy It is a long established fact that a
           reader will be distracted by the readable content of a page when looking at its layout..</p>
       </div>
 
-      <div id="my-keen-slider3" class="keen-slider mt-5">
+      <div id="my-keen-slider3" class="keen-slider mt-5 wow slideInUp" >
         <!-- first Card  -->
         <div class="keen-slider__slide number-slide1">
           <div class="card">
@@ -1135,7 +1143,7 @@
     <!-- Brand -->
     <section id="brand">
       <div class="container">
-        <div class="section text-center relative">
+        <div class="section text-center relative wow bounceInDown">
           <span class="section__subtitle">VEHICLE BRANDS</span>
           <h5 class="section__title ">Compatible With Vehicle Brands</h5>
           <p class="section__description ">Lorem Ipsum is simply dummy It is a long established fact that a
@@ -1143,7 +1151,7 @@
         </div>
 
 
-        <div class="row g-3 mt-3 mt-md-5 g-md-0 brand-modals">
+        <div class="row g-3 mt-3 mt-md-5 g-md-0 brand-modals  wow slideInUp" data-wow-delay=".6s">
           <div class="col-sm-6 col-lg-3 ">
             <div class="modal-card no-topBorder">
               <img src="./images/car-modal-1.png" />
@@ -1193,7 +1201,7 @@
 
     <section id="brand" style="background: #F7F9FA;">
       <div class="container">
-        <div class="section text-center relative">
+        <div class="section text-center relative  wow bounceInDown">
           <span class="section__subtitle">RECENT ARTICLES</span>
           <h5 class="section__title ">Our Latest Blog</h5>
           <p class="section__description ">Lorem Ipsum is simply dummy It is a long established fact that a
@@ -1201,7 +1209,7 @@
         </div>
 
 
-        <div id="my-keen-slider4" class="keen-slider mt-5">
+        <div id="my-keen-slider4" class="keen-slider mt-5 wow slideInUp">
           <!-- first Card  -->
           <div class="keen-slider__slide number-slide1">
             <div class="card">
@@ -1241,8 +1249,8 @@
             </div>
           </div>
 
-           <!-- Second Card  -->
-           <div class="keen-slider__slide number-slide1">
+          <!-- Second Card  -->
+          <div class="keen-slider__slide number-slide1">
             <div class="card">
               <div class="carousal-image relative">
                 <img src="./images/blog-2.jpg" class="card-img-top card--zoom" alt="carousal not found">
@@ -1280,44 +1288,44 @@
             </div>
           </div>
 
-            <!-- Third Card  -->
-            <div class="keen-slider__slide number-slide1">
-              <div class="card">
-                <div class="carousal-image relative">
-                  <img src="./images/blog-3.jpg" class="card-img-top card--zoom" alt="carousal not found">
-                  <div class="date">
-                    <span>26</span>
-                    <span>July</span>
-                  </div>
-                </div>
-                <div class="card-body text-center carousal-card-body" style="place-items: baseline; text-align: left;">
-                  <span class="card-subtitle d-flex align-items-center" style="text-align: left;">
-                    <div class="d-flex align-items-center" style="gap: 20px">
-                      <div class="d-flex align-items-center" style="gap: 10px">
-                        <i class="fa fa-user"></i>
-                        BY ADMIN
-                      </div>
-                      <div class="d-flex align-items-center" style="gap: 10px">
-                        <i class="fa fa-comments"></i>
-                        0 Comments
-                      </div>
-                    </div>
-                  </span>
-                  <h5 class="card-title" style="text-align: left;">EVs play an important role in transport</h5>
-                  <p class="card-text" style="text-align: left;">It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at its layout. .</p>
-                  <button style="margin-top: -23px;position: relative;left: -30px;
-                  " class="button button--transparent d-flex align-items-center justify-content-between">
-                    <span class="button__line line--small"></span>
-                    <span class="button__text">Read More</span>
-                    <span class="button__icon d-flex align-items-center">
-                      <span class="button__line line--big"></span>
-                      <img src="./svg/carret-green.svg" alt="carret right not found" />
-                    </span>
-                  </button>
+          <!-- Third Card  -->
+          <div class="keen-slider__slide number-slide1">
+            <div class="card">
+              <div class="carousal-image relative">
+                <img src="./images/blog-3.jpg" class="card-img-top card--zoom" alt="carousal not found">
+                <div class="date">
+                  <span>26</span>
+                  <span>July</span>
                 </div>
               </div>
+              <div class="card-body text-center carousal-card-body" style="place-items: baseline; text-align: left;">
+                <span class="card-subtitle d-flex align-items-center" style="text-align: left;">
+                  <div class="d-flex align-items-center" style="gap: 20px">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <i class="fa fa-user"></i>
+                      BY ADMIN
+                    </div>
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <i class="fa fa-comments"></i>
+                      0 Comments
+                    </div>
+                  </div>
+                </span>
+                <h5 class="card-title" style="text-align: left;">EVs play an important role in transport</h5>
+                <p class="card-text" style="text-align: left;">It is a long established fact that a reader will be
+                  distracted by the readable content of a page when looking at its layout. .</p>
+                <button style="margin-top: -23px;position: relative;left: -30px;
+                  " class="button button--transparent d-flex align-items-center justify-content-between">
+                  <span class="button__line line--small"></span>
+                  <span class="button__text">Read More</span>
+                  <span class="button__icon d-flex align-items-center">
+                    <span class="button__line line--big"></span>
+                    <img src="./svg/carret-green.svg" alt="carret right not found" />
+                  </span>
+                </button>
+              </div>
             </div>
+          </div>
 
         </div>
       </div>
@@ -1332,6 +1340,9 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.6.6/keen-slider.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+    integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script src="./js/main.js"></script>
 </body>
