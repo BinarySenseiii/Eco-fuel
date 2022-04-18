@@ -27,6 +27,7 @@ svg {
 
    /* typography based on screen sizes  */
    --header-lg: clamp(30px, 13.8461525px + 4.615385vw, 72px);
+   --header-xx: clamp(30px, 13.8461525px + 4.615385vw, 52px);
    --header-md: clamp(25px, 14.2307695px + 3.076923vw, 48px);
    --header-sm: clamp(20px, 15.6923085px + 1.230769vw, 28px);
    --body-lg: 20px;
@@ -1003,6 +1004,72 @@ form button {
    color: var(--white-clr);
    padding-block: 1.5rem;
    font-size: 18px;
+}
+
+/* 
+   =================================
+      About -- page
+   ================================
+*/
+
+#page-redirect {
+   background-image: url(https://ecofuel.peacefulqode.com/wp-content/uploads/2021/09/bg-2.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   min-height: 200px;
+   background-attachment: fixed;
+   position: relative;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.breadcrumb-container {
+   display: grid;
+   gap: 10px;
+   position: relative;
+   z-index: 9999;
+   text-align: center;
+}
+
+.breadcrumb-container h1 {
+   color: var(--white-clr);
+   font-family: 'Futura PT Medium';
+   font-size: var(--header-xx)
+
+}
+.breadcrumb {
+   font-size: 18px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.breadcrumb .active {
+   color: var(--green--light) !important;
+}
+
+.breadcrumb a {
+   color: var(--white-clr);
+   font-family: 'Futura PT Book';
+   text-decoration: none;
+}
+
+.breadcrumb a:hover {
+   color: var(--green--light);
+}
+
+.icons-about i {
+   font-size: var(--header-xx);
+   color: var(--green--light);
+}
+
+.icons-about h2 {
+   font-size: var(--header-sm);
+   margin-left: 20px;
+   font-family: 'Futura PT Book';
 }
 
 /* Media Queries  */
