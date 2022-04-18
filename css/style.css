@@ -408,7 +408,8 @@ body {
 }
 
 /* Provider */
-#provider {
+#provider,
+#footer {
    background-image: url(https://ecofuel.peacefulqode.com/wp-content/uploads/2021/09/bg-2.jpg);
    background-position: center center;
    background-repeat: no-repeat;
@@ -416,6 +417,12 @@ body {
    height: 500px;
    background-attachment: fixed;
    position: relative;
+}
+
+#footer {
+   height: auto;
+   padding-block: 4rem;
+   background-attachment: unset;
 }
 
 .provider__inner {
@@ -858,6 +865,146 @@ body {
    display: block;
 }
 
+/* Footer  */
+
+#footer {
+   color: var(--white-clr);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#footer p {
+   font-size: 18px;
+   font-family: 'Futura PT Book';
+}
+
+#footer h2 {
+   font-size: 28px;
+   font-family: 'Futura PT Medium';
+   position: relative;
+}
+
+#footer h2::before {
+   content: "";
+   position: absolute;
+   bottom: -5px;
+   left: 0;
+   width: 45px;
+   height: 2px;
+   display: inline-block;
+   background: var(--green--light);
+}
+
+.content--1 {
+   display: grid;
+   gap: 10px;
+}
+
+.content--1 img {
+   width: 200px;
+}
+
+.footer-contacts {
+   display: grid;
+}
+
+.contact__link {
+   padding: 0;
+   border: 0;
+   margin: 0;
+   font-size: 18px;
+}
+
+.contact__link i {
+   color: var(--green--light);
+}
+
+
+.footer-list {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   margin-block-start: 2rem;
+
+   display: grid;
+   gap: 10px;
+}
+
+
+.footer-list i {
+   display: none;
+}
+
+.footer-list__link {
+   text-decoration: none;
+   cursor: pointer;
+   font-size: 17px;
+   font-family: 'Futura PT Book';
+   color: var(--white-clr);
+   position: relative;
+   padding-inline-start: 1rem;
+}
+
+.footer-list__link::before {
+   content: '\f054';
+   position: absolute;
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900;
+   font-size: 12px;
+   top: 20%;
+   transform: translateX(-50%);
+   left: -5px;
+   color: var(--green--light);
+   display: inline-block;
+   margin: auto 0;
+}
+
+.footer-list__link:hover {
+   color: var(--green--light);
+}
+
+.ctr {
+   margin-block: 2rem;
+}
+
+form {
+   width: 100%;
+   display: block;
+   display: grid;
+   gap: 10px;
+}
+
+input[type="text"] {
+   border: 0;
+   outline: 0;
+   height: 40px;
+   border-radius: 4px;
+   font-size: 14px;
+   padding-inline: 1rem;
+   width: 100%;
+}
+
+form button {
+   border: 0;
+   outline: 0;
+   background: var(--green--light);
+   color: var(--white-clr);
+   padding-block: .45rem;
+   font-size: 20px;
+   font-family: 'Futura PT Book' ;
+}
+
+
+.copy-rights {
+   font-family: 'Futura PT Book';
+   text-align: center;
+   background: var(--dark-clr);
+   color: var(--white-clr);
+   padding-block: 1.5rem;
+   font-size: 18px;
+}
+
 /* Media Queries  */
 @media screen and (max-width: 1200px) {
    .progress-grid {
@@ -881,7 +1028,8 @@ body {
    .section__description,
    .service--card .card-text,
    .about-list span,
-   .client-data span {
+   .client-data span,
+   .copy-rights  {
       font-size: 16px;
    }
 
@@ -894,6 +1042,13 @@ body {
 
    .force-section--padding {
       margin-top: 6rem;
+   }
+
+   .footer-list__link::before,
+   .btn-downloads {
+      display: none !important;
+      opacity: 0;
+      pointer-events: none;
    }
 
 
