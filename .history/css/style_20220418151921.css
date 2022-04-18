@@ -1047,10 +1047,6 @@ form button {
    justify-content: center;
 }
 
-.breadcrumb i {
-   font-size: 12px !important;
-}
-
 .breadcrumb .active {
    color: var(--green--light) !important;
 }

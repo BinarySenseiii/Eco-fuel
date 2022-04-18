@@ -1041,14 +1041,10 @@ form button {
 
 }
 .breadcrumb {
-   font-size: 18px;
+   font-size: 16px;
    display: flex;
    align-items: center;
    justify-content: center;
-}
-
-.breadcrumb i {
-   font-size: 12px !important;
 }
 
 .breadcrumb .active {
